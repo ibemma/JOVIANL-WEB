@@ -17,12 +17,12 @@ JOBS = [
     },
     {
         "id": "3",
-        "job title": "Office Assistance",
+        "title": "Office Assistance",
         "location": "portharcourt, Nigeria",
     },
     {
         "id": "4",
-        "job title": "Financial Secretary",
+        "title": "Financial Secretary",
         "location": "Paris, France",
         "salary": "EUR. 50,000",
     },
