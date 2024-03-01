@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bughies Careers</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <style>
-            #banner{
-                height: 360px;
-                width: 100%;
-                object-fit: cover;
-                margin-bottom: 16px
-            }
-        </style>
+        {%include"bootstrap.html"%}
+        
         <link rel= "shortcut icon" href= "{{url_for('static', filename= 'icon.ico')}}"/>
     </head>
 
 
     <body>
         {%include 'nav.html' %}
-         <img class= 'img-fluid' id= 'banner' mt-2 mb-4 src= "{{url_for('static', filename= 'ff.jpeg')}}"/>
-
+        {%include 'banner.html' %}
         <div class= container>
-            <h1 class= "text-center mt-2 mb-4">Bughies Careers</h1> 
-            <p class= 'lead' style= "margin-bottom:16px">
+            <h1 class= "text-center mt-2 mb-4">Bughies Careers</h1>
+            <p class= 'lead' style= "margin-bottom:16px text-align:100%">
                 Welcome to Bughie Careers, your one-stop destination for finding the perfect job match for your career aspirations. Our website is designed to make the job search process seamless and efficient, connecting talented individuals with exciting opportunities across various industries. At Bughie Careers, we understand the challenges of navigating the job market, which is why we've curated a user-friendly platform that streamlines the search for both job seekers and employers. Whether you're a recent graduate looking to kickstart your career or a seasoned professional seeking new challenges, Bughie Careers is the ideal tool to discover a wide range of job openings that align with your skills, experience, and ambitions.
             </p>   
             <div class= "row" style= "margin-bottom:16px" >
                 <div class="col-md-7">
                 <p class= 'lead'>
-
-                Our team at Bughie Careers is dedicated to creating an inclusive and dynamic job search experience, offering a wealth of resources to empower job seekers in their quest for the perfect career opportunity. From informative articles and expert advice on resume building to interview tips and career development insights, our website is more than just a job website it's a comprehensive career resource hub. The name "Bughie" embodies our commitment to innovation and agility in the job market, as we strive to revolutionize the way individuals approach their professional trajectories. With Bughie Careers, you can embark on a journey of endless possibilities, where your dream job is just a few clicks away.
+                    Our team at Bughie Careers is dedicated to creating an inclusive and dynamic job search experience, offering a wealth of resources to empower job seekers in their quest for the perfect career opportunity. From informative articles and expert advice on resume building to interview tips and career development insights, our website is more than just a job board it's a comprehensive career resource hub. The name "Bughie" embodies our commitment to innovation and agility in the job market, as we strive to revolutionize the way individuals approach their professional trajectories. With Bughie Careers, you can embark on a journey of endless possibilities, where your dream job is just a few clicks away.
                 </p>
                 </div>
                 <div class="d-none d-md-block col-md-5" >
