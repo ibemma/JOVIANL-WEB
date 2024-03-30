@@ -9,12 +9,7 @@ db_connection_string = os.getenv("DB_CONNECTION_STRING")
 
 
 engine = create_engine(
-    db_connection_string,
-    connect_args={"ssl": {"ssl_ca": os.getenv("DB_CERT")}},
-    pool_timeout=7,
-    pool_recycle=60,
-    pool_pre_ping=True,
-    isolation_level="AUTOCOMMIT",
+    db_connection_string, connect_args={"ssl": {"ssl_ca": os.getenv("DB_CERT")}}
 )
 
 
