@@ -10,32 +10,54 @@
 
     <body>
         {%include 'nav.html' %}
-        {%include 'banner.html' %}
-        <div class= container>
-            <h1 class= "text-center mt-2 mb-4">Bughies Careers</h1>
-            <p class= 'lead' style= "margin-bottom:16px text-align:100%">
-                Welcome to Bughie Careers, your one-stop destination for finding the perfect job match for your career aspirations. Our website is designed to make the job search process seamless and efficient, connecting talented individuals with exciting opportunities across various industries. At Bughie Careers, we understand the challenges of navigating the job market, which is why we've curated a user-friendly platform that streamlines the search for both job seekers and employers. Whether you're a recent graduate looking to kickstart your career or a seasoned professional seeking new challenges, Bughie Careers is the ideal tool to discover a wide range of job openings that align with your skills, experience, and ambitions.
-            </p>   
-            <div class= "row" style= "margin-bottom:16px" >
-                <div class="col-md-7">
-                <p class= 'lead'>
-                    Our team at Bughie Careers is dedicated to creating an inclusive and dynamic job search experience, offering a wealth of resources to empower job seekers in their quest for the perfect career opportunity. From informative articles and expert advice on resume building to interview tips and career development insights, our website is more than just a job board it's a comprehensive career resource hub. The name "Bughie" embodies our commitment to innovation and agility in the job market, as we strive to revolutionize the way individuals approach their professional trajectories. With Bughie Careers, you can embark on a journey of endless possibilities, where your dream job is just a few clicks away.
-                </p>
-                </div>
-                <div class="d-none d-md-block col-md-5" >
-                 <img src="/static/people.jpeg" style= "height: 320px;border-radius: 4px;">
+        <div>
+        
+            <div style ="background-color: rgb(214, 151, 69); width: 100%; height: 790px">
+                {%include 'banner.html' %}
+                <h1 class= "text-center mt-1 mb-6, container" style= "padding-bottom: 10px;">Bughies Careers</h1>
+                <div class= "container" >
+                    <div class= "row" style= "margin-bottom:16px" >
+                        <div class="col-md-5">
+                            <img src="/static/gg.jpg" style= "height: 320px;border-radius: 4px; width: 100%; margin-bottom:16px">
+                        </div>
+                        <div class= "d-none d-md-block col-md-7">
+                            <p class= 'lead' style= "margin-bottom:16px text-align:100% color: rgb(0,0,0);">
+                                Welcome to Bughie Careers, your one-stop destination for finding the perfect job match for your career aspirations. Our website is designed to make the job search process seamless and efficient, connecting talented individuals with exciting opportunities across various industries. At Bughie Careers, we understand the challenges of navigating the job market, which is why we've curated a user-friendly platform that streamlines the search for both job seekers and employers. Whether you're a recent graduate looking to kickstart your career or a seasoned professional seeking new challenges, Bughie Careers is the ideal tool to discover a wide range of job openings that align with your skills, experience, and ambitions.
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h2 class= "text-center  mt-2 mb-4">Open Position</h2>
-            <div>
-                {% for job in jobs %}
-                    {% include "job_item.html" %}
-                {% endfor %}
+            <div style ="background-color: darkgrey; height: 390px; width: 100%;">
+                <div class= "container" >
+
+                    <div class= "row" style= "margin-bottom:16px; " >
+                        <div class="col-md-7" style= "margin-top: 29px;">
+                            <p class= 'lead' style= "color: rgb(0,0,0);">
+                                Our team at Bughie Careers is dedicated to creating an inclusive and dynamic job search experience, offering a wealth of resources to empower job seekers in their quest for the perfect career opportunity. From informative articles and expert advice on resume building to interview tips and career development insights, our website is more than just a job board it's a comprehensive career resource hub. The name "Bughie" embodies our commitment to innovation and agility in the job market, as we strive to revolutionize the way individuals approach their professional trajectories. With Bughie Careers, you can embark on a journey of endless possibilities, where your dream job is just a few clicks away.
+                            </p>
+                        </div>
+                        <div class="d-none d-md-block col-md-5" style= "margin-top: 29px;" >
+                            <img src="/static/people.jpg" style= "height: 320px;border-radius: 4px;">
+                        </div>
+                
+                    </div>
+                </div>
             </div>
-            <div class= 'text-center'>
-                <a href="mailto:hello@bughie.ai?subject=Question%20about%20job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20questions%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
-            </div>            
+        <div style = "background-color: burlywood; width: 100%;">
+            <div class= "container" >
+                <h2 class= "text-center mb-4 " style= " padding-top: 15px; padding-bottom: 30px;" >Open Position</h2>
+                <div>
+                    {% for job in jobs %}
+                        {% include "job_item.html" %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-    {%include'footer.html'%}
+        <div style = "background-color: dimgrey; width: 100%;">
+            <div class= "container  text-center" style= "padding-top: 15px; padding-bottom: 20px">
+                <a href="mailto:hello@bughie.ai?subject=Question%20about%20job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20questions%20here%3E" class="btn btn-primary btn-lg"  >Contact Us</a>
+                {%include'footer.html'%}
+            </div>
+        </div>
     </body>
 </html>

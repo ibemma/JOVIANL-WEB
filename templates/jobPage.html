@@ -4,34 +4,43 @@
     <title>{{job.title}} - Bughie Careers</title>
     {%include"bootstrap.html"%}
    </head> 
-   <body>
+   <body style= "background-color: cadetblue;">
       {%include 'nav.html' %}
-      {%include 'banner.html' %}
-      <div class= "container">
-         <h1 class= "text-center mt-2 mb-4">Bughies Careers</h1>
-         <h3 class = "mb-2">{{job.title}}</h3>
-         <p class= 'lead mt-0'>{{job.location}}</p>
-         
-         <h4>Resposibilites</h4>
-         <ul>
-            {% for line in job.responsibilities.split("\n")%}
-               <li>{{line}}</li>         
-            {% endfor %}
-         </ul>
+      <div style = "background-color: coral; width: 100%; border-radius:50px; padding-bottom: 16px">
+         {%include 'banner.html' %}
+         <div class= "container">
+            <h1 class= "text-center mt-2 mb-4">Bughies Careers</h1>
+            <h3 class = "mb-2">{{job.title}}</h3>
+            <p class= 'lead mt-0'>{{job.location}}</p>
+            
+            <h4>Resposibilites</h4>
+            <ul>
+               {% for line in job.responsibilities.split("\n")%}
+                  <li>{{line}}</li>         
+               {% endfor %}
+            </ul>
 
-         <h4>Requirements</h4>
-         <ol>
-            {% for line in job.responsibilities.split("\n")%}
-               <li>{{line}}</li>         
-            {% endfor %}
-         </ol>
-         
-         <h4>Salary</h4>
-         <p>{{job.currency}}{{job.salary}}</p>
-
+            <h4>Requirements</h4>
+            <ol>
+               {% for line in job.responsibilities.split("\n")%}
+                  <li>{{line}}</li>         
+               {% endfor %}
+            </ol>
+            
+            <h4>Salary</h4>
+            <p>{{job.currency}}{{job.salary}}</p>
+         </div>
       </div>
-         
+      <div style= "padding-top: 16px; background-color: cadetblue; width: 100%">
+         <div class= "container" > 
+            {% include "application_form.html"%}
+         </div>
+      </div>
+      <div style= "background-color: dimgrey; width: 100%; -webkit-border-radius: 50px 50px 0px 0px; padding-bottom: 10px">
+         <div class= "container">
+            {%include'footer.html'%}
+         </div>
+      </div>
 
-    {%include'footer.html'%} 
    </body>
 </html>

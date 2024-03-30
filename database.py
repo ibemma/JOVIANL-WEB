@@ -9,7 +9,12 @@ db_connection_string = os.getenv("DB_CONNECTION_STRING")
 
 
 engine = create_engine(
-    db_connection_string, connect_args={"ssl": {"ssl_ca": os.getenv("DB_CERT")}}
+    db_connection_string,
+    connect_args={"ssl": {"ssl_ca": os.getenv("DB_CERT")}},
+    pool_timeout=7,
+    pool_recycle=60,
+    pool_pre_ping=True,
+    isolation_level="AUTOCOMMIT",
 )
 
 
@@ -31,3 +36,24 @@ def load_job_from_db(id):
             return None
         else:
             return dict(rows[0])
+
+
+def add_application_to_db(
+    job_id, full_name, email, linkedin_url, education, work_experience, resume_url
+):
+
+    with engine.connect as conn:
+
+        query = text(
+            "INSERT INTO `bughiecareers`.`application` (`job_id`, `full_name`, `email`, `linkedin_url`, `education`, `work_experience`, `resume_url`)  VALUES("
+            + job_id
+            + full_name
+            + email
+            + linkedin_url
+            + education
+            + work_experience
+            + resume_url
+            + ");"
+        )
+        conn.execute(query)
+        conn.commit()
